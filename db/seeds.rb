@@ -2,9 +2,9 @@ require 'faker'
 
 20.times do
   Book.create(
-    name: Faker::Book.title,
-    author: Faker::Book.title,
-    genre: Faker::Book.publisher,
+    title: Faker::Book.title,
+    author: Faker::Book.author,
+    genre: Faker::Book.genre,
     price: Faker::Commerce.price.to_f
   )
 end

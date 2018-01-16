@@ -1,4 +1,4 @@
-class Api::BookstoreController < ApplicationController
+class Api::BooksController < ApplicationController
   def index
   end
 
