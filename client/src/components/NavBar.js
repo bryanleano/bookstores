@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Segment } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
@@ -32,13 +32,27 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <Menu pointing secondary>
+      <div style={{ backgroundColor: "#a9a9a9", paddingTop: 5 }}>
+        <Segment basic style={{ marginTop: 0 }}>
+        <Menu secondary style={{ backgroundColor: '#a9a9a9' }}>
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item name='Home' />
+          </Link>
+          <Link to='/books'>
+            <Menu.Item name='Books' />
+          </Link>
+          <Link to='/storeandhours'>
+            <Menu.Item name='Store Info' />
+          </Link>
+          <Link to='/contact'>
+            <Menu.Item name='Contact' />
+          </Link>
+          <Link to='/cart'>
+            <Menu.Item name='Shopping Cart' />
           </Link>
           { this.rightNavs() }
         </Menu>
+        </Segment>
       </div>
     );
   }

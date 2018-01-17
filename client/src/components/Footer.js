@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+
+const Footer = () => (
+  <div class="ui inverted vertical footer segment" style={styles.footer}>
+  <div class="ui center aligned container">
+      <h4 class="ui header">&copy; Copyright 2018 | All rights reserved | BryGuy Studios</h4>
+      <a href="https://www.facebook.com/"><i class="facebook square icon big"></i></a>
+      <a href="https://twitter.com/"><i class="twitter square icon big"></i></a>
+      <a href="https://instagram.com/"><i class="instagram square icon big"></i></a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="youtube square icon big"></i></a>
+      <a href="https://www.linkedin.com/in/bryan-leano"><i class="linkedin square icon big"></i></a>
+  </div>
+  </div>
+)
+
+const styles = {
+  footer: {
+    backgroundColor: '#a9a9a9',
+    bottom: '0px',
+    left: '0px',
+    right: '0px',
+    position: 'fixed'
+  }
+}
+
+export default Footer;
