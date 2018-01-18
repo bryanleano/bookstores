@@ -1,6 +1,6 @@
 require 'faker'
 
-20.times do
+25.times do
   Book.create(
     title: Faker::Book.title,
     author: Faker::Book.author,

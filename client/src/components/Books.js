@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import books_image from '../images/BooksPic.png';
 import { getBooks } from '../actions/books';
-import { Header, Segment, Grid, Card } from 'semantic-ui-react';
+import { Header, Segment, Grid, Card, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 class Books extends Component {
@@ -16,11 +16,11 @@ class Books extends Component {
       return(
         <Grid.Column
           key={book.id}
-          computer={12}
+          computer={4}
           tablet={6}
-          phone={12}
+          phone={16}
         >
-          <Card centered raised fluid style={box} >
+          <Card centered raised fluid style={box}>
             <Card.Content>
               <Card.Header>{book.title}</Card.Header>
               <Card.Meta> ${book.price}</Card.Meta>
@@ -29,6 +29,7 @@ class Books extends Component {
             </Card.Content>
           </Card>
         </Grid.Column>
+        
       )
     })
   }
@@ -41,18 +42,20 @@ class Books extends Component {
     );
     else 
     return (
-      <div>
-        <Segment basic>
-        <Header as='h1' textAlign='center'>Books</Header>
-        </Segment>
-        <Segment basic>
-          <Grid columns={12}>
-            <Grid.Row centered>
+        <div style={styles.backgroundImage}>
+        <Header 
+          as='h1' 
+          textAlign='center'
+          style={styles.headerText}>Books</Header>
+        <Segment basic style={styles.bottom}>
+          <Grid columns={12} centered >
+            <Grid.Row >
               {this.displayBooks()}
             </Grid.Row>
           </Grid>
         </Segment>
-      </div>
+        </div>
+      
     )
   }
 }
@@ -65,20 +68,26 @@ const box = {
   margin: '4px',
 }
 
-
-
 const styles = {
   backgroundImage: {
-    background: `linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .55) ), url(${books_image})`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .55) ), url(${books_image})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
     width: '100%',
-    height: '100vh',
-    margin: '0',
+    minHeight: '100vh',
     padding: '0',
+    position: 'relative',
+  },
+  headerText: {
+    color: '#fffdef',
+    fontFamily: 'helvetica',
+    fontSize: '5em',
+    letterSpacing: '5px',
+    marginTop: '4px',
+  },
+  bottom: {
+    marginBottom: '85px',
   }
 }
-
-
 
 export default connect(mapStateToProps)(Books);

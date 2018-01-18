@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Footer = () => (
   <div class="ui inverted vertical footer segment" style={styles.footer}>
   <div class="ui center aligned container">
-      <h4 class="ui header">&copy; Copyright 2018 | All rights reserved | BryGuy Studios</h4>
+      <h4 class="ui inverted header">&copy; Copyright 2018 | All rights reserved | BryGuy Studios</h4>
       <a href="https://www.facebook.com/" target="_blank"><i class="facebook square icon big"></i></a>
       <a href="https://twitter.com/" target="_blank"><i class="twitter square icon big"></i></a>
       <a href="https://instagram.com/" target="_blank"><i class="instagram square icon big"></i></a>
@@ -15,12 +15,14 @@ const Footer = () => (
 
 const styles = {
   footer: {
-    backgroundColor: '#a9a9a9',
+    backgroundColor: 'rgba(0, 0, 0, .20)',
     bottom: '0px',
     left: '0px',
     right: '0px',
-    position: 'relative'
+    height: '85px',
+    position: 'fixed'
   }
 }
+
 
 export default Footer;

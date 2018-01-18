@@ -5,7 +5,7 @@ import { Header, Segment, Grid } from 'semantic-ui-react';
 class Home extends Component {
   render() {
     return (
-      <Segment style={styles.backgroundImage}>
+      <div style={styles.backgroundImage}>
         <Grid columns={2}>
           <Grid.Row>
             <Grid.Column>
@@ -18,20 +18,20 @@ class Home extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </Segment>
+      </div>
     );
   }
 }
 
 const styles = {
   backgroundImage: {
-    background: `linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .55) ), url(${home_image})`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .55) ), url(${home_image})`,
     backgroundSize: 'cover',
     overflow: 'hidden',
     width: '100%',
     height: '100vh',
-    margin: '0',
     padding: '0',
+    position: 'relative',
   },
     headerText: {
     color: '#fffdef',
