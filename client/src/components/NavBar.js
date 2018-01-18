@@ -58,7 +58,12 @@ class NavBar extends Component {
 
 const styles = {
   header: {
-    backgroundColor: 'rgba(0, 0, 0, .20)',
+    backgroundColor: 'rgba(192, 192, 192, .50)',
+    top: '0px',
+    left: '0px',
+    right: '0px',
+    height: '10px',
+    position: 'fixed'
   }
 }
 

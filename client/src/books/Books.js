@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import books_image from '../images/BooksPic.png';
 import { getBooks } from '../actions/books';
-import { Header, Segment, Grid, Card, Divider } from 'semantic-ui-react';
+import { Header, Segment, Grid, Card, Button, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Books extends Component {
@@ -47,6 +48,17 @@ class Books extends Component {
           as='h1' 
           textAlign='center'
           style={styles.headerText}>Books</Header>
+        <Segment basic textAlign='center'>
+          <Link to={`/books/create`}>
+            <Button
+              color='blue'
+              icon
+              labelPosition='left'>
+              <Icon name='add' />
+              Add book
+            </Button>
+          </Link>
+        </Segment>
         <Segment basic style={styles.bottom}>
           <Grid columns={12} centered >
             <Grid.Row >
@@ -67,6 +79,7 @@ const mapStateToProps = (state) => {
 const box = {
   margin: '4px',
 }
+
 
 const styles = {
   backgroundImage: {

@@ -5,10 +5,11 @@ import Login from './Login';
 import Register from './Register';
 import Flash from './Flash';
 import Home from './Home';
-import Books from './Books';
+import Books from '../books/Books';
 import StoreAndHours from './StoreAndHours';
 import Contact from './Contact';
 import ShoppingCart from './ShoppingCart';
+import CreateBook from '../books/CreateBook';
 import Footer from './Footer';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
@@ -19,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        
         <Flash />
         <FetchUser>
           <Switch>
@@ -30,9 +31,11 @@ class App extends Component {
             <Route exact path='/storeandhours' component={StoreAndHours} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/cart' component={ShoppingCart} />
+            <Route exact path='/books/create' component={CreateBook} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
+        <NavBar />
         <Footer />
       </div>
     );
