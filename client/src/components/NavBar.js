@@ -30,10 +30,11 @@ class NavBar extends Component {
     );
   }
 
+  // "#a9a9a9" 
+
   render() {
     return (
-      <div style={{ backgroundColor: "#a9a9a9", paddingTop: 5 }}>
-        <Segment basic style={{ marginTop: 0 }}>
+
         <Menu secondary style={{ backgroundColor: '#a9a9a9' }}>
           <Link to='/'>
             <Menu.Item name='Home' />
@@ -52,8 +53,7 @@ class NavBar extends Component {
           </Link>
           { this.rightNavs() }
         </Menu>
-        </Segment>
-      </div>
+
     );
   }
 }
