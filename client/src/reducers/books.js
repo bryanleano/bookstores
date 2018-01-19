@@ -2,8 +2,10 @@ const books = ( state = [], action) => {
   switch (action.type) {
     case 'GET_BOOKS':
       return action.books;
+    case 'ADD_BOOK':
+      return [ action.book, ...state ];
     default:
-    return state;
+      return state;
   }
 }
 

@@ -15,3 +15,17 @@ export const getBooks = () => {
   }
 }
 
+export const addBook = (book, history) => {
+  return(dispatch) => {
+    axios.post('/api/books', { book })
+      .then(res => {
+        dispatch({ type: 'ADD_BOOK', books: res.data })
+        history.push(`./${res.data.id}`)
+      })
+      .catch(err => {
+        dispatch(setHeaders(err.headers));
+        dispatch(setFlash('Failed To Add Book', 'red'));
+      });
+  }
+}
+

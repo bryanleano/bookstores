@@ -49,7 +49,7 @@ class Books extends Component {
           textAlign='center'
           style={styles.headerText}>Books</Header>
         <Segment basic textAlign='center'>
-          <Link to={`/books/create`}>
+          <Link to={`/create`}>
             <Button
               color='blue'
               icon

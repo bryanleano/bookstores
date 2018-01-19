@@ -31,7 +31,7 @@ class App extends Component {
             <Route exact path='/storeandhours' component={StoreAndHours} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/cart' component={ShoppingCart} />
-            <Route exact path='/books/create' component={CreateBook} />
+            <Route exact path='/create' component={CreateBook} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
